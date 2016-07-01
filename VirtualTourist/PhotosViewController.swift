@@ -58,7 +58,6 @@ class photosViewController: UIViewController {
     
     @IBOutlet weak var collection: UICollectionView!
     
-    @IBOutlet weak var photoTitleLabel: UILabel!
 
     var photoSet: [Photo]!
 
