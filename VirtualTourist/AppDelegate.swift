@@ -12,9 +12,32 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    
+    let stack = CoreDataStack(modelName: "Model")!
+    
+    
+    func preloadData(){
+        
+        
+        // Remove previous stuff (if any)
+        do{
+            try stack.dropAllData()
+        }catch{
+            print("Error droping all objects in DB")
+        }
+        
+        
+        let firstPin = Pin(latitude: 101.0, longitude: 102.0, context: stack.context)
+     
+
+    }
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        //preloadData()
+        
         // Override point for customization after application launch.
         return true
     }
