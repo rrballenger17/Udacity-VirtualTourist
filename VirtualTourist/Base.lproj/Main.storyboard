@@ -119,7 +119,7 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w03-e5-Kdt">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w03-e5-Kdt">
                                         <rect key="frame" x="0.0" y="485" width="600" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="3ut-7J-hKr"/>
@@ -134,7 +134,7 @@
                                             <action selector="newPictures:" destination="eNt-0u-sRq" eventType="touchUpInside" id="qNP-EH-C0g"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N13-i6-Nyu">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N13-i6-Nyu">
                                         <rect key="frame" x="0.0" y="545" width="600" height="55"/>
                                         <state key="normal" title="Delete Selected Photos"/>
                                         <connections>

@@ -60,6 +60,8 @@ class photosViewController: UIViewController {
     
 
     var photoSet: [Photo]!
+    
+    var numPhotos: Int = 15
 
     // display saved photos and initiate flickr download by location
     override func viewDidLoad() {
@@ -75,6 +77,7 @@ class photosViewController: UIViewController {
         collection.delegate = self
         collection.dataSource = self
 
+        
         
         // get stored photos if any
         let generator = pin.photo!.generate()
@@ -100,9 +103,13 @@ class photosViewController: UIViewController {
                 
             }
             
+            numPhotos = photoSet.count
+            
             return
         }
         
+        // when downloading new photos, ensure 15 cells in the collection
+        numPhotos = 15
         
         performUIUpdatesOnMain(){
             self.fDownload.searchByLatLon(self, lat: self.latitude, long: self.longitude)
@@ -152,7 +159,7 @@ extension photosViewController : UICollectionViewDelegate, UICollectionViewDataS
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 15
+        return numPhotos
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
